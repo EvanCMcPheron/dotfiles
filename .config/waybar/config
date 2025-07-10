@@ -47,7 +47,7 @@
     "sort-by-number": true
     },
     "persistent-workspaces": {
-             "*": 3
+             "*": 10
         }   
   },
 
