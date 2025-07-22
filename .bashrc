@@ -15,11 +15,11 @@ if [ $? -ne 0 ]; then
   sudo pacman -S git;
 fi;
 
-if [ ! -d "$HOME/projects" ]; then echo "making projects directory..."
-  mkdir $HOME/projects;
+if [ ! -d "$HOME/Projects" ]; then echo "making projects directory..."
+  mkdir $HOME/Projects;
 fi;
 
-DOTFILES=$HOME/projects/dotfiles.git
+DOTFILES=$HOME/Projects/dotfiles.git
 
 if [ ! -d $DOTFILES ]; then
   echo "init dotfiles bare git repo..."

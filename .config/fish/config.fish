@@ -21,7 +21,7 @@ end
   alias h="hyprland"
   alias aur="pikaur"
   alias rebind-caps="sudo kanata -c ~/.config/kanata/config.kbd"
-  alias config="git --git-dir=$HOME/projects/dotfiles.git --work-tree=$HOME"
+  alias config="git --git-dir=$HOME/Projects/dotfiles.git --work-tree=$HOME"
   alias ls="eza"
   alias l="eza -l"
   alias restart-ashell="pkill ashell ; ashell"
@@ -35,13 +35,13 @@ end
   end
 
   # Ensure ~/projects exists
-  if not test -d "$HOME/projects"
+  if not test -d "$HOME/Projects"
       echo "making projects directory..."
-      mkdir $HOME/projects
+      mkdir $HOME/Projects
   end
 
   # Initialize bare dotfiles repo if missing
-  set DOTFILES "$HOME/projects/dotfiles.git"
+  set DOTFILES "$HOME/Projects/dotfiles.git"
   if not test -d $DOTFILES
       echo "init dotfiles bare git repo..."
       git init --bare $DOTFILES
@@ -79,5 +79,15 @@ end
   starship init fish | source
   
   alias cat=bat
-    
+
+  alias ding="pw-play ~/Music/ding.mp3"
+
+  if not pgrep -f kanata > /dev/null
+    kanata --cfg ~/.config/kanata/config.kbd & 
+  end
+
+  if not pgrep -f hyprland > /dev/null
+    command hyprland
+  end
+
 end
