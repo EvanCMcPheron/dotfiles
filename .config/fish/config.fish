@@ -5,6 +5,7 @@ set -x PATH /home/etanheinmik/repos/swww/target/release/ $PATH
 set -x PATH /home/etanheinmik/repos/swww/target/release/swww $PATH
 set -x PATH /home/etanheinmik/repos/woomer/target/release/woomer $PATH
 set -x PATH /home/etanheinmik/.cargo/bin/ $PATH
+set -x PATH /home/etanheinmik/classes/ece391/riscv/bin $PATH
 
 if status is-interactive
   function fish_user_key_bindings

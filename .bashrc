@@ -4,6 +4,7 @@ export PATH=/home/etanheinmik/repos/swww/target/release/:$PATH
 export PATH=/home/etanheinmik/repos/swww/target/release/swww:$PATH
 export PATH=/home/etanheinmik/repos/woomer/target/release/woomer:$PATH
 export PATH=/home/etanheinmik/.cargo/bin/:$PATH
+export PATH=/home/etanheinmik/classes/ece391/riscv/bin:$PATH
 
 alias rebind-caps="sudo kanata -c ~/.config/kanata/config.kbd"
 
