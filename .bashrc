@@ -57,3 +57,4 @@ eval "$(zoxide init --cmd cd bash)"
 
 alias restart-ashell="pkill ashell ; ashell"
 alias python-venv="source ~/PyVenv/bin/activate"
+alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"

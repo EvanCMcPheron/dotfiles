@@ -23,10 +23,9 @@ end
   alias aur="pikaur"
   alias rebind-caps="sudo kanata -c ~/.config/kanata/config.kbd"
   alias config="git --git-dir=$HOME/Projects/dotfiles.git --work-tree=$HOME"
-  alias ls="eza"
-  alias l="eza -l"
   alias restart-ashell="pkill ashell ; ashell"
   alias python-venv="source ~/PyVenv/bin/activate.fish"
+  alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 
   # Git check and setup
   if not type -q git
@@ -65,6 +64,9 @@ end
   if not type -q eza
       echo "Eza not installed, installing eza..."
       yay -S eza
+  else
+    alias ls="eza"
+    alias l="eza -l --sort=time"
   end
 
   # zoxide installation
@@ -74,7 +76,7 @@ end
   end
 
   # Zoxide initialization
-  zoxide init fish | source
+  zoxide init fish --cmd cd | source
       # Commands to run in interactive sessions can go here
 
   starship init fish | source
