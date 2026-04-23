@@ -5,8 +5,6 @@ export PATH=/home/etanheinmik/repos/swww/target/release/swww:$PATH
 export PATH=/home/etanheinmik/repos/woomer/target/release/woomer:$PATH
 export PATH=/home/etanheinmik/.cargo/bin/:$PATH
 export PATH=/home/etanheinmik/classes/ece391/riscv/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
-
 
 alias rebind-caps="sudo kanata -c ~/.config/kanata/config.kbd"
 
@@ -60,5 +58,3 @@ eval "$(zoxide init --cmd cd bash)"
 alias restart-ashell="pkill ashell ; ashell"
 alias python-venv="source ~/PyVenv/bin/activate"
 alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
