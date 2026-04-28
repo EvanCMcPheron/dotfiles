@@ -19,7 +19,7 @@ end
   set -U fish_greeting
 
   # Aliases
-  alias h="hyprland"
+  alias h="start-hyprland"
   alias aur="pikaur"
   alias rebind-caps="sudo kanata -c ~/.config/kanata/config.kbd"
   alias config="git --git-dir=$HOME/Projects/dotfiles.git --work-tree=$HOME"
@@ -90,7 +90,7 @@ end
   end
 
   if not pgrep -f hyprland > /dev/null
-    command hyprland
+    command start-hyprland
   end
 
 end
