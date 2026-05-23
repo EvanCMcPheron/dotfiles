@@ -1,7 +1,7 @@
 #!/bin/bash
 WARNED_LOW=false
 WARNED_CRIT=false
-LOW=30
+LOW=10
 CRIT=5
 
 while sleep 1; do
