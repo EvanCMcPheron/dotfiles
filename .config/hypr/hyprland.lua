@@ -1,0 +1,34 @@
+-- Shared variables — globals so sub-modules can reference them without imports
+ipc 		 = "noctalia msg "
+terminal     = "kitty"
+fileManager  = "nautilus"
+menu         = ipc .. "panel-toggle launcher"
+dashboard    = ipc .. "panel-toggle control-center"
+powermenu    = "panel-toggle session"
+clipboard    = ipc .. "panel-toggle clipboard"
+emojipicker  = ""
+screenshot   = ipc .. "screenshot-region"
+screenrecord = ""
+settings_panel   = ipc .. "settings-toggle"
+window_switcher = ipc .. "window-switcher"
+mail         = "mailspring --password-store=\"gnome-libsecret\""
+mainMonitor  = "eDP-1"
+IDE          = "neovide"
+browser      = "firefox"
+discord      = "vesktop"
+taskManager  = "kitty -e btop"
+notes        = "obsidian"
+wallpapers   = "waypaper"
+mainMod      = "SUPER"
+resizeSpd    = 50  -- pixels; percentage strings ("-10% 0") are not supported by hl.dsp.resizeactive
+persistant_workspaces = false
+
+local cfg = os.getenv("HOME") .. "/.config/hypr/hyprland/"
+dofile(cfg .. "monitors.lua")
+dofile(cfg .. "env.lua")
+dofile(cfg .. "animations.lua")
+dofile(cfg .. "window_rules.lua")
+dofile(cfg .. "config.lua")
+dofile(cfg .. "keybinds.lua")
+dofile(cfg .. "startup.lua")
+dofile(cfg .. "plugins.lua")

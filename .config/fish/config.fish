@@ -22,10 +22,12 @@ end
   alias h="start-hyprland"
   alias aur="pikaur"
   alias rebind-caps="sudo kanata -c ~/.config/kanata/config.kbd"
-  alias config="git --git-dir=$HOME/Projects/dotfiles.git --work-tree=$HOME"
+  alias conf="git --git-dir=$HOME/Projects/dotfiles.git --work-tree=$HOME"
+  alias lazyconf="lazygit --git-dir=$HOME/Projects/dotfiles.git --work-tree=$HOME"
   alias restart-ashell="pkill ashell ; ashell"
   alias python-venv="source ~/PyVenv/bin/activate.fish"
   alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+  alias notify="noctalia msg notification-show"
 
   # Git check and setup
   if not type -q git
@@ -47,8 +49,8 @@ end
       git init --bare $DOTFILES
   end
 
-  # Git config for dotfiles
-  config config status.showUntrackedFiles no
+  # Git conf for dotfiles
+  conf config status.showUntrackedFiles no
 
   # Yay installation
   if not type -q yay
