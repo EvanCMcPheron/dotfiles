@@ -17,6 +17,10 @@ if status is-interactive
 end
 
   set -U fish_greeting
+  set -g fish_cursor_default block
+  set -g fish_cursor_insert line
+  set -g fish_cursor_replace_one underscore
+  set -g fish_cursor_visual block
 
   # Aliases
   alias h="start-hyprland"
@@ -27,7 +31,12 @@ end
   alias restart-ashell="pkill ashell ; ashell"
   alias python-venv="source ~/PyVenv/bin/activate.fish"
   alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
-  alias notify="noctalia msg notification-show"
+  alias nmls="nmcli device wifi list"
+  alias nmcn="nmcli device wifi connect --ask"
+  alias l="eza --icons -ab --group-directories-first --git --color-scale all --color always -lh -a -S"
+  alias ll="eza --icons -ab --group-directories-first --git --color-scale all --color always -lh --sort=date -S"
+  alias lt="eza --icons -ab -group-directories-first --git --color-scale all --color always -lb --sort=date -S --tree --level"
+  alias cat="bat"
 
   # Git check and setup
   if not type -q git
@@ -83,7 +92,6 @@ end
 
   starship init fish | source
   
-  alias cat=bat
 
   alias ding="pw-play ~/Music/ding.mp3"
 

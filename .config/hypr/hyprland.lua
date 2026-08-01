@@ -4,9 +4,8 @@ terminal     = "kitty"
 fileManager  = "nautilus"
 menu         = ipc .. "panel-toggle launcher"
 dashboard    = ipc .. "panel-toggle control-center"
-powermenu    = "panel-toggle session"
+powermenu    = ipc .. "panel-toggle session"
 clipboard    = ipc .. "panel-toggle clipboard"
-emojipicker  = ""
 screenshot   = ipc .. "screenshot-region"
 screenrecord = ""
 settings_panel   = ipc .. "settings-toggle"
@@ -15,7 +14,7 @@ mail         = "mailspring --password-store=\"gnome-libsecret\""
 mainMonitor  = "eDP-1"
 IDE          = "neovide"
 browser      = "firefox"
-discord      = "vesktop"
+discord      = "flatpak run dev.vencord.Vesktop"
 taskManager  = "kitty -e btop"
 notes        = "obsidian"
 wallpapers   = "waypaper"
@@ -32,3 +31,6 @@ dofile(cfg .. "config.lua")
 dofile(cfg .. "keybinds.lua")
 dofile(cfg .. "startup.lua")
 dofile(cfg .. "plugins.lua")
+
+-- For Noctalia Color templates
+require("noctalia").apply_theme()

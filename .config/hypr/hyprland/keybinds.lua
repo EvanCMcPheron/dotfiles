@@ -21,7 +21,6 @@ hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("loginctl lock-session"))
 hl.bind(mainMod .. " + CTRL + P", hl.dsp.exec_cmd("loginctl lock-session ; sudo systemctl hibernate"))
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd(powermenu))
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(emojipicker))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboard))
 hl.bind(mainMod .. "  + S", hl.dsp.exec_cmd(settings_panel))
 
