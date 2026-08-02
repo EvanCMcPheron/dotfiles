@@ -11,8 +11,9 @@ hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(wallpapers), { description = "Open wa
 hl.bind(mainMod .. " + M", hl.dsp.exec_raw(mail), { description = "Open mail client" })
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_raw(menu), { description = "Open app launcher" })
 hl.bind("CTRL + SPACE", hl.dsp.exec_cmd(dashboard), { description = "Open control center" })
-hl.bind(mainMod .. " + SHIFT + TAB", hl.dsp.exec_cmd(ipc .. "bar-toggle"), { description = "Toggle bar" })
-hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(ipc .. "bar-toggle side"), { description = "Toggle side bar" })
+hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(ipc .. "bar-toggle top"), { description = "Toggle top bar" })
+hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(ipc .. "bar-hide side"))
+hl.bind(mainMod .. " + SHIFT + TAB", hl.dsp.exec_cmd(ipc .. "bar-toggle side"), { description = "Toggle side bar" })
 hl.bind("ALT + SPACE", hl.dsp.exec_raw(menu), { description = "Open app launcher" })
 
 -- System
@@ -23,6 +24,7 @@ hl.bind("SUPER + CTRL + SPACE", hl.dsp.exec_cmd(powermenu), { description = "Ope
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"), { description = "Reload Hyprland config" })
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboard), { description = "Open clipboard history" })
 hl.bind(mainMod .. "  + S", hl.dsp.exec_cmd(settings_panel), { description = "Open settings panel" })
+hl.bind(mainMod .. "  + SHIFT + SLASH", hl.dsp.exec_cmd(bindingsinfo), { description = "Open Keybindings" })
 
 -- Window management
 hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }), { description = "Toggle floating" })

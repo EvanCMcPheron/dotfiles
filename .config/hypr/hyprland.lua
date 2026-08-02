@@ -19,6 +19,7 @@ taskManager  = "kitty -e btop"
 notes        = "obsidian"
 wallpapers   = "waypaper"
 mainMod      = "SUPER"
+bindingsinfo = ipc .. "panel-toggle kenn/keybind-cheatsheet:cheatsheet"
 resizeSpd    = 50  -- pixels; percentage strings ("-10% 0") are not supported by hl.dsp.resizeactive
 persistant_workspaces = false
 
