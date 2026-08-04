@@ -10,15 +10,14 @@ hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(taskManager), { description = "Open t
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(wallpapers), { description = "Open wallpaper picker" })
 hl.bind(mainMod .. " + M", hl.dsp.exec_raw(mail), { description = "Open mail client" })
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_raw(menu), { description = "Open app launcher" })
-hl.bind("CTRL + SPACE", hl.dsp.exec_cmd(dashboard), { description = "Open control center" })
+hl.bind("ALT + SPACE", hl.dsp.exec_cmd(dashboard), { description = "Open control center" })
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(ipc .. "bar-toggle top"), { description = "Toggle top bar" })
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(ipc .. "bar-hide side"))
 hl.bind(mainMod .. " + SHIFT + TAB", hl.dsp.exec_cmd(ipc .. "bar-toggle side"), { description = "Toggle side bar" })
-hl.bind("ALT + SPACE", hl.dsp.exec_raw(menu), { description = "Open app launcher" })
 
 -- System
 hl.bind(mainMod .. " + C", hl.dsp.window.close(), { description = "Close focused window" })
-hl.bind(mainMod .. " + CTRL + M", hl.dsp.exit(), { description = "Exit Hyprland session" })
+-- hl.bind(mainMod .. " + CTRL + M", hl.dsp.exit(), { description = "Exit Hyprland session" })
 hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("loginctl lock-session"), { description = "Lock session" })
 hl.bind("SUPER + CTRL + SPACE", hl.dsp.exec_cmd(powermenu), { description = "Open power menu" })
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"), { description = "Reload Hyprland config" })

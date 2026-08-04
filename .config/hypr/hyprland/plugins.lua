@@ -130,3 +130,56 @@ if hl.plugin.dynamic_cursors then
 		},
 	}}}
 end
+
+if hl.plugin.hyprglass then
+		--   local hg = hl.plugin.hyprglass
+		--
+		--   hg.config({
+		--       default_theme = "dark",
+		--       default_preset = "clear",
+		--       tint_color = 0x8899aa22,
+		--
+		--       brightness = 0.9,
+		--       dark = { brightness = 0.82 },
+		--       light = { adaptive_boost = 0.5 },
+		--
+		--       layers = { enabled = true },
+		--
+		-- enabled = false,
+		--   })
+		--
+		--   -- Layer surfaces: each call whitelists the namespace and configures it.
+		--   -- hg.layer() only matches wlr-layer-shell namespaces (bars/panels/overlays) and
+		--   -- requires an EXACT namespace string -- no wildcards/regex. Regular app windows
+		--   -- (kitty included) already get the glass effect automatically when the plugin is
+		--   -- enabled; control those per-window via `windowrule = tag +hyprglass_disabled, class:...`
+		--   -- (or +hyprglass_enabled / +hyprglass_theme_* / +hyprglass_preset_<name>).
+		--   hg.layer("debug-panel", { exclude = true })
+		--
+		--   -- Noctalia shell surfaces (mirrors the namespace group already used by the
+		--   -- native `noctalia` layer_rule in window_rules.lua; desktop widgets are
+		--   -- intentionally left out of glass, same as that rule).
+		--   hg.layer("noctalia-bar-top")
+		--   hg.layer("noctalia-bar-side")
+		--   hg.layer("noctalia-notification")
+		--   hg.layer("noctalia-dock")
+		--   hg.layer("noctalia-panel")
+		--   hg.layer("noctalia-attached-panel")
+		--   hg.layer("noctalia-osd")
+		--   hg.layer("noctalia-window-switcher")
+		--
+		--   -- Presets
+		--   hg.preset("clear", {
+		--       glass_opacity = 0.8,
+		--       blur_strength = 1.5,
+		--       dark = { brightness = 0.7 },
+		--       light = { brightness = 1.2 },
+		--   })
+		--
+		--   hg.preset("contrasted", {
+		--       inherits = "high_contrast",
+		--       contrast = 1.2,
+		--       adaptive_dim = 1.5,
+		--       dark = { tint_color = 0x02142aa9 },
+		--   })
+end

@@ -1,6 +1,5 @@
--- Shared variables — globals so sub-modules can reference them without imports
 ipc 		 = "noctalia msg "
-terminal     = "kitty"
+terminal     = "ghostty"
 fileManager  = "nautilus"
 menu         = ipc .. "panel-toggle launcher"
 dashboard    = ipc .. "panel-toggle control-center"

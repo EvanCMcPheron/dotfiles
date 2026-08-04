@@ -1,8 +1,3 @@
-hl.device({
-    name = "epic-mouse-v1",
-    sensitivity = -0.5,
-})
-
 hl.config({
     debug = {
         disable_logs = false,
@@ -69,9 +64,3 @@ hl.config({
         },
     },
 })
-
-hl.workspace_rule({ workspace = "1", monitor = "DP-1", persistent = persistant_workspaces })
-hl.workspace_rule({ workspace = "2", monitor = "DP-1", persistent = persistant_workspaces })
-hl.workspace_rule({ workspace = "3", monitor = "DP-1", persistent = persistant_workspaces })
-hl.workspace_rule({ workspace = "4", monitor = "DP-1", persistent = persistant_workspaces })
-hl.workspace_rule({ workspace = "5", monitor = "DP-1", persistent = persistant_workspaces })

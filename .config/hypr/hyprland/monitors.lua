@@ -1,21 +1,30 @@
+laptop_w = 2880
+laptop_h = 1920
+laptop_r = 60.0
+laptop_s = 1.33
+
+monitor_w = 2880
+monitor_h = 1920
+monitor_r = 60.0
+monitor_s = 2
+
 hl.monitor({
     output = "eDP-1",
-    mode = "2880x1920@60.0",
-    position = "0x0",
-    scale = "1.33",
+    mode = laptop_w .. "x" .. laptop_h .. "@" .. laptop_r,
+    position = "0x"..monitor_h / monitor_s,
+    scale = laptop_s,
 })
+for i=1,4,1 do
+	hl.monitor({
+		output = "DP-"..i,
+		mode = monitor_w .. "x" .. monitor_h .. "@" .. monitor_r,
+		position = "0x0",
+		scale = monitor_s,
+	})
+end
 
-hl.monitor({
-    output = "DP-3",
-    mode = "1920x1080@60.00",
-    position = "2496x192",
-    scale = "1",
-})
+for i=1,9,1 do
+	hl.workspace_rule({workspace=tostring(i), monitor="eDP-1"})
+end
 
-hl.monitor({
-    output = "DP-1",
-    mode = "3840x2160@30.00",
-    position = "2176x32",
-    scale = "2",
-})
 -- monitor=HDMI-A-1, preferred, auto, 1, mirror, eDP-1
