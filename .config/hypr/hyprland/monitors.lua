@@ -3,10 +3,10 @@ laptop_h = 1920
 laptop_r = 60.0
 laptop_s = 1.33
 
-monitor_w = 2880
-monitor_h = 1920
+monitor_w = 1920
+monitor_h = 1080
 monitor_r = 60.0
-monitor_s = 2
+monitor_s = 1
 
 hl.monitor({
     output = "eDP-1",
