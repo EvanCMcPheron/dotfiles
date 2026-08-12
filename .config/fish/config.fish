@@ -36,7 +36,7 @@ end
   alias nmcn="nmcli device wifi connect --ask"
   alias l="eza --icons -ab --group-directories-first --git --color-scale all --color always -lh -a -S"
   alias ll="eza --icons -ab --group-directories-first --git --color-scale all --color always -lh --sort=date -S"
-  alias lt="eza --icons -ab -group-directories-first --git --color-scale all --color always -lb --sort=date -S --tree --level"
+  alias lt="eza --icons -ab --group-directories-first --git --color-scale all --color always -lb --sort=date -S --tree --level"
   alias cat="bat"
 
   # Git check and setup
