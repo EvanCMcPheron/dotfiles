@@ -42,3 +42,19 @@ hl.layer_rule({
 	blur = true,
 	blur_popups = true,
 })
+
+side_margin = 30
+top_margin = 60
+message_w = ( laptop_abs_w - side_margin * 2 ) * 0.3
+message_h = laptop_abs_h - side_margin - top_margin
+message_x = laptop_abs_w - message_w - side_margin
+message_y = top_margin
+
+hl.window_rule({
+	match = { class = messages_class },
+	float = true,
+	pin = true,
+	monitor = main_mon,
+	size = { message_w, message_h },
+	move = { message_x, message_y },
+})

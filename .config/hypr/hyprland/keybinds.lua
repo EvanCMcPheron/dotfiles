@@ -8,7 +8,34 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager), { description = "Open f
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(notes), { description = "Open notes" })
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(taskManager), { description = "Open task manager" })
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(wallpapers), { description = "Open wallpaper picker" })
-hl.bind(mainMod .. " + M", hl.dsp.exec_raw(mail), { description = "Open mail client" })
+
+hl.bind(mainMod .. " + M", function ()
+	local win = hl.get_windows({ class = messages_class })[1]
+
+	if not win then
+		-- Not running yet: launch it
+		hl.dispatch(hl.dsp.exec_cmd(messages))
+		return
+	end
+
+	if win.workspace.special then
+		-- Currently hidden in the scratchpad: bring it back and focus it
+		hl.dispatch(hl.dsp.window.move({
+			window = win.address,
+			workspace = hl.get_active_workspace().name,
+		}))
+		hl.dispatch(hl.dsp.window.move({ window = win, workspace = hl.get_active_workspace(main_mon) }))
+		hl.dispatch(hl.dsp.focus({ window = win }))
+		hl.dispatch(hl.dsp.window.pin({ action = "enable", window = win }))
+	else
+		-- Currently visible: tuck it away
+		hl.dispatch(hl.dsp.window.pin({ action = "disable", window = win }))
+		hl.dispatch(hl.dsp.window.move({ window = win, workspace = SCRATCH_WORKSPACE, follow = false }))
+	end
+
+end, { description = "Toggle Messaging App" })
+
+hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_raw(mail), { description = "Open mail client" })
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_raw(menu), { description = "Open app launcher" })
 hl.bind("ALT + SPACE", hl.dsp.exec_cmd(dashboard), { description = "Open control center" })
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(ipc .. "bar-toggle top"), { description = "Toggle top bar" })
