@@ -1,27 +1,27 @@
-laptop_w = 2880
-laptop_h = 1920
-laptop_r = 60.0
-laptop_s = 1.33
-laptop_abs_w = laptop_w / laptop_s
-laptop_abs_h = laptop_h / laptop_s
+LAPTOP_WIDTH_PX = 2880
+LAPTOP_HEIGHT_PX = 1920
+LAPTOP_REFRESH_HZ = 60.0
+LAPTOP_SCALE = 1.25
+LAPTOP_LOGICAL_WIDTH = LAPTOP_WIDTH_PX / LAPTOP_SCALE
+LAPTOP_LOGICAL_HEIGHT = LAPTOP_HEIGHT_PX / LAPTOP_SCALE
 
-monitor_w = 1920
-monitor_h = 1080
-monitor_r = 60.0
-monitor_s = 1
+EXTERNAL_MONITOR_WIDTH_PX = 1920
+EXTERNAL_MONITOR_HEIGHT_PX = 1080
+EXTERNAL_MONITOR_REFRESH_HZ = 60.0
+EXTERNAL_MONITOR_SCALE = 1
 
 hl.monitor({
-    output = main_mon,
-    mode = laptop_w .. "x" .. laptop_h .. "@" .. laptop_r,
-    position = "0x"..monitor_h / monitor_s,
-    scale = laptop_s,
+    output = MAIN_MONITOR_OUTPUT,
+    mode = LAPTOP_WIDTH_PX .. "x" .. LAPTOP_HEIGHT_PX .. "@" .. LAPTOP_REFRESH_HZ,
+    position = "0x"..EXTERNAL_MONITOR_HEIGHT_PX / EXTERNAL_MONITOR_SCALE,
+    scale = LAPTOP_SCALE,
 })
 for i=1,4,1 do
 	hl.monitor({
 		output = "DP-"..i,
-		mode = monitor_w .. "x" .. monitor_h .. "@" .. monitor_r,
+		mode = EXTERNAL_MONITOR_WIDTH_PX .. "x" .. EXTERNAL_MONITOR_HEIGHT_PX .. "@" .. EXTERNAL_MONITOR_REFRESH_HZ,
 		position = "0x0",
-		scale = monitor_s,
+		scale = EXTERNAL_MONITOR_SCALE,
 	})
 end
 
