@@ -16,6 +16,19 @@ hl.window_rule({ match = { title = "^(confirm window)$", class = "^(zoom)$" }, m
 -- Floating opacity
 hl.window_rule({ match = { float = true }, opacity = "1.0 override 1.0 override" })
 
+-- Vesktop: kill border/blur so the transparent theme reads as see-through, not frosted
+hl.window_rule({
+    name  = "vesktop-no-border-no-blur",
+    match = { class = "^(vesktop)$" },
+	border_color = "rgba(FF000000)",
+    rounding    = 0,
+    no_blur     = false,
+    no_shadow   = true,
+	no_dim      = true,
+	xray        = true,
+	decorate = false,
+})
+
 -- Float rules
 hl.window_rule({ match = { class = "waypaper" },                   float = true })
 hl.window_rule({ match = { title = "^(Picture-in-Picture)$" },     float = true })
