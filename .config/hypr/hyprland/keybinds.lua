@@ -65,8 +65,8 @@ hl.bind(MAIN_MOD_KEY .. " + SHIFT + v", hl.dsp.layout("togglesplit"), { descript
 
 -- Screenshots
 -- hl.bind("CTRL + SHIFT + PRINT",     hl.dsp.exec_cmd("hyprshot -m output"))
--- hl.bind("CTRL + PRINT",             hl.dsp.exec_cmd("hyprshot -m window"))
--- hl.bind("PRINT",                    hl.dsp.exec_cmd("hyprshot -m region"))
+hl.bind("CTRL + PRINT",             hl.dsp.exec_cmd(SCREENSHOT_REGION_CMD))
+hl.bind("PRINT",                    hl.dsp.exec_cmd(SCREENSHOT_CMD))
 -- hl.bind("PRINT", hl.dsp.exec_cmd(SCREENSHOT_CMD))
 -- hl.bind(MAIN_MOD_KEY .. " + PRINT", hl.dsp.exec_cmd("ambxst run tools"))
 
