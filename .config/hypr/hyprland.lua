@@ -40,6 +40,7 @@ dofile(cfg .. "config.lua")
 dofile(cfg .. "keybinds.lua")
 dofile(cfg .. "startup.lua")
 dofile(cfg .. "plugins.lua")
+dofile(cfg .. "battery_saver.lua")
 
 -- For Noctalia Color templates
 require("noctalia").apply_theme()

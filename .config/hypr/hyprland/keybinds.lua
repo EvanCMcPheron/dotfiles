@@ -4,6 +4,7 @@ hl.bind(MAIN_MOD_KEY .. " + N", hl.dsp.exec_raw(IDE_CMD), { description = "Open 
 hl.bind(MAIN_MOD_KEY .. " + B", hl.dsp.exec_cmd(BROWSER_CMD), { description = "Open browser" })
 hl.bind(MAIN_MOD_KEY .. " + SHIFT + B", hl.dsp.exec_cmd(BROWSER_CMD .. " --private-window"), { description = "Open private browser window" })
 hl.bind(MAIN_MOD_KEY .. " + P", hl.dsp.exec_cmd(TERMINAL_CMD), { description = "Open terminal" })
+hl.bind(MAIN_MOD_KEY .. " + SHIFT + P", hl.dsp.exec_cmd("~/.config/hypr/scripts/battery-saver-toggle.sh"), { description = "Toggle battery saver (blur/shadow/animations)" })
 hl.bind(MAIN_MOD_KEY .. " + E", hl.dsp.exec_cmd(FILE_MANAGER_CMD), { description = "Open file manager" })
 hl.bind(MAIN_MOD_KEY .. " + T", hl.dsp.exec_cmd(NOTES_CMD), { description = "Open notes" })
 hl.bind(MAIN_MOD_KEY .. " + Q", hl.dsp.exec_cmd(TASK_MANAGER_CMD), { description = "Open task manager" })
@@ -65,8 +66,10 @@ hl.bind(MAIN_MOD_KEY .. " + SHIFT + v", hl.dsp.layout("togglesplit"), { descript
 
 -- Screenshots
 -- hl.bind("CTRL + SHIFT + PRINT",     hl.dsp.exec_cmd("hyprshot -m output"))
-hl.bind("CTRL + PRINT",             hl.dsp.exec_cmd(SCREENSHOT_REGION_CMD))
-hl.bind("PRINT",                    hl.dsp.exec_cmd(SCREENSHOT_CMD))
+hl.bind("CTRL + PRINT",             hl.dsp.exec_cmd(SCREENSHOT_REGION_CMD), {description = "Screenshot Region"})
+hl.bind("SHIFT + PRINT",             hl.dsp.exec_cmd(""), {description = "Toggle shadowplay"})
+hl.bind("PRINT",                    hl.dsp.exec_cmd(SCREENSHOT_CMD), {description = "Full screenshot"})
+hl.bind(MAIN_MOD_KEY .. " + Z",                    hl.dsp.exec_cmd("echo asdf"), {description = "Open GPU recorder"})
 -- hl.bind("PRINT", hl.dsp.exec_cmd(SCREENSHOT_CMD))
 -- hl.bind(MAIN_MOD_KEY .. " + PRINT", hl.dsp.exec_cmd("ambxst run tools"))
 
