@@ -53,8 +53,8 @@ hl.bind(MAIN_MOD_KEY .. " + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"), { des
 hl.bind(MAIN_MOD_KEY .. " + V", hl.dsp.exec_cmd(CLIPBOARD_CMD), { description = "Open clipboard history" })
 hl.bind(MAIN_MOD_KEY .. "  + S", hl.dsp.exec_cmd(SETTINGS_PANEL_CMD), { description = "Open settings panel" })
 hl.bind(MAIN_MOD_KEY .. "  + SHIFT + SLASH", hl.dsp.exec_cmd(BINDINGS_INFO_CMD), { description = "Open Keybindings" })
-hl.bind(MAIN_MOD_KEY .. " + D", hld.dps.exec_cmd(CLEAR_NOTIFICATIONS_CMD), { description = "Clear (Delete) Notifications" })
-hl.bind(MAIN_MOD_KEY .. " + SHIFT + D", hld.dps.exec_cmd(DND_CMD), { description = "Toggle Do Not Disturb (DND)" })
+hl.bind(MAIN_MOD_KEY .. " + D", hl.dsp.exec_cmd(CLEAR_NOTIFICATIONS_CMD), { description = "Clear (Delete) Notifications" })
+hl.bind(MAIN_MOD_KEY .. " + SHIFT + D", hl.dsp.exec_cmd(DND_CMD), { description = "Toggle Do Not Disturb (DND)" })
 
 -- Window management
 hl.bind(MAIN_MOD_KEY .. " + F", hl.dsp.window.float({ action = "toggle" }), { description = "Toggle floating" })
