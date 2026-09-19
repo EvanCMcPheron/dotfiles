@@ -6,7 +6,6 @@ hl.bind(MAIN_MOD_KEY .. " + SHIFT + B", hl.dsp.exec_cmd(BROWSER_CMD .. " --priva
 hl.bind(MAIN_MOD_KEY .. " + P", hl.dsp.exec_cmd(TERMINAL_CMD), { description = "Open terminal" })
 hl.bind(MAIN_MOD_KEY .. " + SHIFT + P", hl.dsp.exec_cmd("~/.config/hypr/scripts/battery-saver-toggle.sh"), { description = "Toggle battery saver (blur/shadow/animations)" })
 hl.bind(MAIN_MOD_KEY .. " + E", hl.dsp.exec_cmd(FILE_MANAGER_CMD), { description = "Open file manager" })
-hl.bind(MAIN_MOD_KEY .. " + T", hl.dsp.exec_cmd(NOTES_CMD), { description = "Open notes" })
 hl.bind(MAIN_MOD_KEY .. " + Q", hl.dsp.exec_cmd(TASK_MANAGER_CMD), { description = "Open task manager" })
 hl.bind(MAIN_MOD_KEY .. " + W", hl.dsp.exec_cmd(WALLPAPERS_CMD), { description = "Open wallpaper picker" })
 hl.bind(MAIN_MOD_KEY .. " + CTRL + C", hl.dsp.exec_cmd(CAFFEINE_CMD), { description = "Toggle Caffeine Mode"})
@@ -54,6 +53,8 @@ hl.bind(MAIN_MOD_KEY .. " + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"), { des
 hl.bind(MAIN_MOD_KEY .. " + V", hl.dsp.exec_cmd(CLIPBOARD_CMD), { description = "Open clipboard history" })
 hl.bind(MAIN_MOD_KEY .. "  + S", hl.dsp.exec_cmd(SETTINGS_PANEL_CMD), { description = "Open settings panel" })
 hl.bind(MAIN_MOD_KEY .. "  + SHIFT + SLASH", hl.dsp.exec_cmd(BINDINGS_INFO_CMD), { description = "Open Keybindings" })
+hl.bind(MAIN_MOD_KEY .. " + D", hld.dps.exec_cmd(CLEAR_NOTIFICATIONS_CMD), { description = "Clear (Delete) Notifications" })
+hl.bind(MAIN_MOD_KEY .. " + SHIFT + D", hld.dps.exec_cmd(DND_CMD), { description = "Toggle Do Not Disturb (DND)" })
 
 -- Window management
 hl.bind(MAIN_MOD_KEY .. " + F", hl.dsp.window.float({ action = "toggle" }), { description = "Toggle floating" })

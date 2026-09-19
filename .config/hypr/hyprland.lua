@@ -17,12 +17,14 @@ IDE_CMD           = "neovide"
 BROWSER_CMD      = "firefox"
 DISCORD_CMD      = "flatpak run dev.vencord.Vesktop"
 TASK_MANAGER_CMD  = "kitty -e btop"
-NOTES_CMD        = "obsidian"
 WALLPAPERS_CMD   = "waypaper"
 MAIN_MOD_KEY      = "SUPER"
 BINDINGS_INFO_CMD = NOCTALIA_IPC_CMD .. "panel-toggle kenn/keybind-cheatsheet:cheatsheet"
 RESIZE_STEP_PX    = 50  -- pixels; percentage strings ("-10% 0") are not supported by hl.dsp.resizeactive
 PERSISTENT_WORKSPACES = false
+
+DND_CMD = NOCTALIA_IPC_CMD .. "notification-dnd-toggle"
+CLEAR_NOTIFICATIONS_CMD = NOCTALIA_IPC_CMD .. "notification-clear-active"
 
 MESSAGES_CLASS = "wah-zqxhL8v7"
 MESSAGES_CMD = "firefox --class=".. MESSAGES_CLASS .. " --name=wah-zqxhL8v7 --profile=/home/etanheinmik/.var/app/org.pvermeer.WebAppHub/data/web-app-hub/profiles/firefox/zqxhL8v7 --no-remote https://messages.google.com/web"
