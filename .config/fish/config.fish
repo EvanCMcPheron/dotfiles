@@ -104,4 +104,6 @@ end
     command start-hyprland
   end
 
+  direnv hook fish | source
+
 end
