@@ -26,6 +26,9 @@ PERSISTENT_WORKSPACES = false
 DND_CMD = NOCTALIA_IPC_CMD .. "notification-dnd-toggle"
 CLEAR_NOTIFICATIONS_CMD = NOCTALIA_IPC_CMD .. "notification-clear-active"
 
+FRAMEWORK_CONTROL_CLASS = 'wah-hCao8oDH'
+FRAMEWORK_CONTROL_CMD = 'firefox --class=' .. FRAMEWORK_CONTROL_CLASS ..' --name=wah-hCao8oDH --profile=/home/etanheinmik/.var/app/org.pvermeer.WebAppHub/data/web-app-hub/profiles/firefox/hCao8oDH --no-remote http://127.0.0.1:30912'
+
 MESSAGES_CLASS = "wah-zqxhL8v7"
 MESSAGES_CMD = "firefox --class=".. MESSAGES_CLASS .. " --name=wah-zqxhL8v7 --profile=/home/etanheinmik/.var/app/org.pvermeer.WebAppHub/data/web-app-hub/profiles/firefox/zqxhL8v7 --no-remote https://messages.google.com/web"
 

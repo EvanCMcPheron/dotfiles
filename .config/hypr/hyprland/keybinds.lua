@@ -51,10 +51,11 @@ hl.bind(MAIN_MOD_KEY .. " + ALT + L", hl.dsp.exec_cmd("loginctl lock-session"), 
 hl.bind("SUPER + CTRL + SPACE", hl.dsp.exec_cmd(POWERMENU_CMD), { description = "Open power menu" })
 hl.bind(MAIN_MOD_KEY .. " + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"), { description = "Reload Hyprland config" })
 hl.bind(MAIN_MOD_KEY .. " + V", hl.dsp.exec_cmd(CLIPBOARD_CMD), { description = "Open clipboard history" })
-hl.bind(MAIN_MOD_KEY .. "  + S", hl.dsp.exec_cmd(SETTINGS_PANEL_CMD), { description = "Open settings panel" })
 hl.bind(MAIN_MOD_KEY .. "  + SHIFT + SLASH", hl.dsp.exec_cmd(BINDINGS_INFO_CMD), { description = "Open Keybindings" })
 hl.bind(MAIN_MOD_KEY .. " + SHIFT + D", hl.dsp.exec_cmd(CLEAR_NOTIFICATIONS_CMD), { description = "Clear (Delete) Notifications" })
 hl.bind(MAIN_MOD_KEY .. " + CTRL + D", hl.dsp.exec_cmd(DND_CMD), { description = "Toggle Do Not Disturb (DND)" })
+hl.bind(MAIN_MOD_KEY .. "  + S", hl.dsp.exec_cmd(SETTINGS_PANEL_CMD), { description = "Open settings panel" })
+hl.bind(MAIN_MOD_KEY .. " + SHIFT + S", hl.dsp.exec_cmd(FRAMEWORK_CONTROL_CMD), { description = "Open Framework Control" })
 
 -- Window management
 hl.bind(MAIN_MOD_KEY .. " + F", hl.dsp.window.float({ action = "toggle" }), { description = "Toggle floating" })
@@ -68,7 +69,7 @@ hl.bind(MAIN_MOD_KEY .. " + SHIFT + v", hl.dsp.layout("togglesplit"), { descript
 -- Screenshots
 -- hl.bind("CTRL + SHIFT + PRINT",     hl.dsp.exec_cmd("hyprshot -m output"))
 hl.bind("CTRL + PRINT",             hl.dsp.exec_cmd(SCREENSHOT_REGION_CMD), {description = "Screenshot Region"})
-hl.bind("SHIFT + PRINT",             hl.dsp.exec_cmd(""), {description = "Toggle shadowplay"})
+hl.bind(MAIN_MOD_KEY .. " + SHIFT + PRINT",   hl.dsp.exec_cmd("echo asdf"), {description = "Toggle shadowplay"})
 hl.bind("PRINT",                    hl.dsp.exec_cmd(SCREENSHOT_CMD), {description = "Full screenshot"})
 hl.bind(MAIN_MOD_KEY .. " + Z",                    hl.dsp.exec_cmd("echo asdf"), {description = "Open GPU recorder"})
 -- hl.bind("PRINT", hl.dsp.exec_cmd(SCREENSHOT_CMD))

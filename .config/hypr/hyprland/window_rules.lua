@@ -40,7 +40,7 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    match = { class = "dev.noctalia.Noctalia" },
+    match = { class = "^(" .. "dev.noctalia.Noctalia" .. "|" .. FRAMEWORK_CONTROL_CLASS .. ")$" },
     float = true,
     pin = true,
     size = { 1080, 920 },
