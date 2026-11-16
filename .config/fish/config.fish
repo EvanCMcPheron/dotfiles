@@ -39,6 +39,8 @@ end
   alias lt="eza --icons -ab --group-directories-first --git --color-scale all --color always -lb --sort=date -S --tree --level"
   alias cat="bat"
 
+  source ~/PyVenv/bin/activate.fish
+
   # Git check and setup
   if not type -q git
       echo "git not installed, installing..."
@@ -107,3 +109,17 @@ end
   direnv hook fish | source
 
 end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/etanheinmik/miniforge3/bin/conda
+    eval /home/etanheinmik/miniforge3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/home/etanheinmik/miniforge3/etc/fish/conf.d/conda.fish"
+        . "/home/etanheinmik/miniforge3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/home/etanheinmik/miniforge3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+
